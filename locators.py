@@ -30,4 +30,4 @@ class TestLocators:
     NAVIGATION_CONSTRUCTOR_TEXT = [By.XPATH,
                                    '//nav[contains(@class, "AppHeader_header")]//p[text()="Конструктор"]']  # Текст навигационного таба "Конструктор"
     NAVIGATION_CONSTRUCTOR_IMAGE = [By.XPATH,
-                                    '//p[text()="Конструктор"]/preceding-sibling::*']  # Картинка навигационного таба "Конструктор"
+                                    '//p[text()="Конструктор"]/preceding-sibling::*[name()="svg"]']  # Картинка навигационного таба "Конструктор"
