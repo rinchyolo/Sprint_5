@@ -27,5 +27,7 @@ class TestLocators:
     TAB_BUNS = [By.XPATH, '//div[contains(@class, "tab")]/span[text()="Булки"]']  # Таб "Булки"
     TITLE_BUNS_TEXT = [By.XPATH,
                        '//div[contains(@class, "BurgerIngredients")]/h2[text()="Булки"]']  # Тайтл "Булки"
-    NAVIGATION_CONSTRUCTOR = [By.XPATH,
-                              '//nav[contains(@class, "AppHeader_header")]//p[text()="Конструктор"]']  # Навигационный таб "Конструктор"
+    NAVIGATION_CONSTRUCTOR_TEXT = [By.XPATH,
+                                   '//nav[contains(@class, "AppHeader_header")]//p[text()="Конструктор"]']  # Текст навигационного таба "Конструктор"
+    NAVIGATION_CONSTRUCTOR_IMAGE = [By.XPATH,
+                                    '//p[text()="Конструктор"]/preceding::*']  # Картинка навигационного таба "Конструктор"

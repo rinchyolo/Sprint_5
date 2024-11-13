@@ -1,3 +1,4 @@
+import pytest
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -22,10 +23,17 @@ class TestNavigation:
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located(TestLocators.AUTHORIZATION_TITLE_TEXT))
 
-    def test_navigation_personal_account_navigation_constructor(self, driver):
+    @pytest.mark.parametrize(
+        "locator",
+        [
+            TestLocators.NAVIGATION_CONSTRUCTOR_TEXT,
+            TestLocators.NAVIGATION_CONSTRUCTOR_IMAGE
+        ]
+    )
+    def test_navigation_personal_account_navigation_constructor(self, driver, locator):
         driver.find_element(*TestLocators.PERSONAL_ACCOUNT).click()
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located(TestLocators.AUTHORIZATION_TITLE_TEXT))
-        driver.find_element(*TestLocators.NAVIGATION_CONSTRUCTOR).click()
+        driver.find_element(*locator).click()
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located(TestLocators.ASSEMBLE_BURGER_TEXT))

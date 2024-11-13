@@ -7,6 +7,7 @@
 3) Вход через кнопку на форме регистрации (Тест test_authorization_via_registration_and_password_recovery)
 4) Вход через кнопку на форме восстановление пароля (Тест test_authorization_via_registration_and_password_recovery)
 - Переход в личный кабинет (Тест test_constructor_navigation_personal_account)
-- Переход из личного кабинета в конструктор (Тест test_navigation_personal_account_navigation_constructor)
+- Переход из личного кабинета в конструктор по тексту (Тест test_navigation_personal_account_navigation_constructor)
+- Переход из личного кабинета в конструктор по логотипу Stellar Burgers (Тест test_navigation_personal_account_navigation_constructor)
 - Выход из аккаунта (Тест test_logout_after_successful_login)
 - Работа переходов к разделам "Булки", "Соусы", "Начинки" (Тест test_constructor_navigation_tabs)
