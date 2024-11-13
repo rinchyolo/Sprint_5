@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 
 class TestLocators:
     # Локаторы для регистрации
-    PERSONAL_ACCOUNT = [By.XPATH, '//*[text()="Личный Кабинет"]']  # Личный кабинет
-    REGISTRATION_TEXT = [By.XPATH, '//*[text()="Зарегистрироваться"]']  # Текст "Зарегистрироваться"
+    PERSONAL_ACCOUNT = [By.XPATH, '//nav//p[text()="Личный Кабинет"]']  # Таб Личный кабинет
+    REGISTRATION_TEXT = [By.XPATH, '//a[text()="Зарегистрироваться"]']  # Текст "Зарегистрироваться"
     NAME_INPUT = [By.XPATH, '//label[text()="Имя"]/following-sibling::input']  # Поле для ввода имени
     EMAIL_INPUT = [By.XPATH, '//label[text()="Email"]/following-sibling::input']  # Поле для ввода почты
     PASSWORD_INPUT = [By.XPATH, '//label[text()="Пароль"]/following-sibling::input']  # Поле для ввода пароля
