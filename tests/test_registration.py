@@ -18,6 +18,7 @@ class TestRegistration:
         WebDriverWait(driver, 10).until(
             expected_conditions.text_to_be_present_in_element(TestLocators.INVALID_PASSWORD_TEXT,
                                                               INVALID_PASSWORD_MESSAGE))
+        assert driver.find_element(*TestLocators.INVALID_PASSWORD_TEXT).is_displayed()
 
     def test_registration_success(self, driver):
         # Регистрация пользователя

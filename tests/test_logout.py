@@ -21,3 +21,4 @@ class TestLogout:
         driver.find_element(*TestLocators.LOGOUT_BUTTON).click()
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located(TestLocators.AUTHORIZATION_TITLE_TEXT))
+        assert driver.find_element(*TestLocators.AUTHORIZATION_TITLE_TEXT).is_displayed()

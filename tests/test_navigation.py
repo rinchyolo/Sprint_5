@@ -22,6 +22,7 @@ class TestNavigation:
         driver.find_element(*TestLocators.PERSONAL_ACCOUNT).click()
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located(TestLocators.AUTHORIZATION_TITLE_TEXT))
+        assert driver.find_element(*TestLocators.REGISTRATION_TEXT).is_displayed()
 
     @pytest.mark.parametrize(
         "locator",
@@ -37,3 +38,4 @@ class TestNavigation:
         driver.find_element(*locator).click()
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located(TestLocators.ASSEMBLE_BURGER_TEXT))
+        assert  driver.find_element(*TestLocators.TITLE_BUNS_TEXT).is_displayed()
